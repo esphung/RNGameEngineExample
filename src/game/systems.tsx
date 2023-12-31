@@ -2,11 +2,11 @@ import { Engine } from "react-native-game-engine";
 import { Entity } from "react-native-game-engine";
 
 interface EngineExtended extends Engine {
-  entities: any;
+  entities: Engine['entities'];
   touches: any;
 };
 
-const MoveFinger = (entities: Engine['entities'], { touches }: { touches: EngineExtended['touches'] }): Engine['entities'] => {
+function MoveFinger(entities: Engine['entities'], { touches }: { touches: EngineExtended['touches'] }): Engine['entities'] {
 
   //-- I'm choosing to update the game state (entities) directly for the sake of brevity and simplicity.
   //-- There's nothing stopping you from treating the game state as immutable and returning a copy..
@@ -27,6 +27,6 @@ const MoveFinger = (entities: Engine['entities'], { touches }: { touches: Engine
   });
 
   return entities;
-};
+}
 
 export { MoveFinger };

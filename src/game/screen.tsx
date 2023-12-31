@@ -11,30 +11,24 @@ interface Entity {
 
 interface BestGameEverState {}
 
-class BestGameEver extends PureComponent<{}, BestGameEverState> {
-  constructor(props: {}) {
-    super(props);
-  }
+function BestGameEver(props: BestGameEverState) {
+  const entities: { [key: number]: Entity } = {
+    1: { position: [40, 200], renderer: <Finger position={[40, 200]} /> },
+    // 2: { position: [100, 200], renderer: <Finger position={[100, 200]} /> },
+    // 3: { position: [160, 200], renderer: <Finger position={[160, 200]} /> },
+    // 4: { position: [220, 200], renderer: <Finger position={[220, 200]} /> },
+    // 5: { position: [280, 200], renderer: <Finger position={[280, 200]} /> },
+  };
 
-  render() {
-    const entities: { [key: number]: Entity } = {
-      1: { position: [40, 200], renderer: <Finger position={[40, 200]} /> },
-      2: { position: [100, 200], renderer: <Finger position={[100, 200]} /> },
-      3: { position: [160, 200], renderer: <Finger position={[160, 200]} /> },
-      4: { position: [220, 200], renderer: <Finger position={[220, 200]} /> },
-      5: { position: [280, 200], renderer: <Finger position={[280, 200]} /> },
-    };
-
-    return (
-      <GameEngine
-        style={styles.container}
-        systems={[MoveFinger]}
-        entities={entities}
-      >
-        <StatusBar hidden={true} />
-      </GameEngine>
-    );
-  }
+  return (
+    <GameEngine
+      style={styles.container}
+      systems={[MoveFinger]}
+      entities={entities}
+    >
+      <StatusBar hidden={true} />
+    </GameEngine>
+  );
 }
 
 const styles = StyleSheet.create({
