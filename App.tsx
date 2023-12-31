@@ -1,10 +1,10 @@
-import HomeScreen from "./src/screens/HomeScreen";
-import { StyleSheet, SafeAreaView } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import GameScreen from "./src/game/screen";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <HomeScreen />
+      <GameScreen />
     </SafeAreaView>
   );
 }
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
   },
 });
 
-// Path: src/screens/HomeScreen.tsx
+// Path: src/screens/GameScreen/GameScreen.tsx
