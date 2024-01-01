@@ -3,17 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "lint": "eslint .",
-    "start": "react-native start",
-    "test": "jest",
+    "android": "ENVFILE=.env npx react-native run-android",
+    "ios": "ENVFILE=.env npx react-native run-ios",
+    "lint": "npx eslint .",
+    "start": "npx react-native start",
+    "test": "npx jest",
     "postinstall": "npx patch-package"
   },
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.73.1",
-    "react-native-game-engine": "^1.2.0"
+    "react-native-game-engine": "git+ssh://git@github.com:esphung/react-native-game-engine.git"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -23,6 +23,7 @@
     "@react-native/eslint-config": "^0.73.1",
     "@react-native/metro-config": "^0.73.2",
     "@react-native/typescript-config": "^0.73.1",
+    "@types/jest": "^29.5.11",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",

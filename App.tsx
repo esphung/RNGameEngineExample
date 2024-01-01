@@ -1,10 +1,14 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
-import GameScreen from "./src/game/screen";
+import GameScreen from "./src/game/Game.component.tsx";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <GameScreen />
+      <GameScreen
+        onEvent={(e: any) => {
+          console.debug({ e });
+        }}
+      />
     </SafeAreaView>
   );
 }
