@@ -1,23 +1,11 @@
 import React from "react";
-import { StatusBar, StyleSheet, View, ViewStyle, Text } from "react-native";
+import { StatusBar, StyleSheet, Text, View, ViewStyle } from "react-native";
 import { GameEngine } from "react-native-game-engine";
+import { Entity, GameProps, GameState } from '../types';
 import { Finger } from "./Game.renderers";
 import { MoveFinger } from "./Game.systems";
 
-export interface Entity {
-  position: [number, number];
-  renderer: JSX.Element;
-}
-
-export interface Touch {
-  type: string;
-  id: number;
-  delta: { pageX: number; pageY: number; };
-}
-
-interface GameState { }
-
-function Game(props: any, state: GameState) {
+function Game(props: GameProps, state: GameState) {
   const entities: { [key: number]: Entity } = {
     1: { position: [40, 200], renderer: <Finger position={[40, 200]} /> },
     2: {

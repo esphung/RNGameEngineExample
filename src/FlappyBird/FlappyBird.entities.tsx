@@ -1,5 +1,5 @@
 import Matter from 'matter-js';
-import Bird from '../components/Bird';
+import Bird from './components/Bird';
 
 /**
  * 
@@ -7,9 +7,7 @@ import Bird from '../components/Bird';
  */
 export default function initialEntities() {
     let engine = Matter.Engine.create({ enableSleeping: false });
-
-    engine.gravity.y = 0.4;
-
+    engine.gravity.y = 0.5;
     return {
         physics: {
             engine: engine,

@@ -1,4 +1,4 @@
-import { Entity, Touch } from './Game.component';
+import { Entity, Touch } from '../types';
 
 interface MoveFingerTouches {
   touches: Touch[];
