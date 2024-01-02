@@ -2028,6 +2028,11 @@
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
+"@types/matter-js@^0.19.5":
+  version "0.19.5"
+  resolved "https://registry.yarnpkg.com/@types/matter-js/-/matter-js-0.19.5.tgz#032cc4679ec186783a644b8e09608bc500dfeffb"
+  integrity sha512-pTVB5krRGb01hr8L6BJqWGoSriqUbbvJ9Fd0Qp0eAOE//w/lFvkaVHkVB8J3wXr9U3lZDzmAjJPPQn7x4wzbWg==
+
 "@types/node@*":
   version "20.10.6"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.10.6.tgz"
@@ -4830,6 +4835,11 @@ marky@^1.2.2:
   version "1.2.5"
   resolved "https://registry.npmjs.org/marky/-/marky-1.2.5.tgz"
   integrity sha512-q9JtQJKjpsVxCRVgQ+WapguSbKC3SQ5HEzFGPAJMStgh3QjCawp00UKv3MTTAArTmGmmPUvllHZoNbZ3gs0I+Q==
+
+matter-js@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/matter-js/-/matter-js-0.19.0.tgz#185e518146ae4fa20c33826ebc7e6e42685e3642"
+  integrity sha512-v2huwvQGOHTGOkMqtHd2hercCG3f6QAObTisPPHg8TZqq2lz7eIY/5i/5YUV8Ibf3mEioFEmwibcPUF2/fnKKQ==
 
 memoize-one@^5.0.0:
   version "5.2.1"

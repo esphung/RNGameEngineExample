@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { StyleSheet, View, ViewStyle } from "react-native";
 
 const RADIUS = 20;

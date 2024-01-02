@@ -1,12 +1,12 @@
 import React from "react";
-import { StatusBar, StyleSheet, ViewStyle } from "react-native";
+import { StatusBar, StyleSheet, View, ViewStyle, Text } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import { Finger } from "./Game.renderers";
 import { MoveFinger } from "./Game.systems";
 
 export interface Entity {
-  position: number[];
-  renderer: React.ReactNode;
+  position: [number, number];
+  renderer: JSX.Element;
 }
 
 export interface Touch {
@@ -20,6 +20,17 @@ interface GameState { }
 function Game(props: any, state: GameState) {
   const entities: { [key: number]: Entity } = {
     1: { position: [40, 200], renderer: <Finger position={[40, 200]} /> },
+    2: {
+      position: [100, 200],
+      renderer: <View
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: 'blue',
+          borderRadius: 50,
+        }}
+      />
+    },
   };
 
   return (
@@ -29,6 +40,7 @@ function Game(props: any, state: GameState) {
       entities={entities}
       onEvent={props.onEvent}
     >
+      <Text>Hello</Text>
       <StatusBar hidden={true} />
     </GameEngine>
   );
