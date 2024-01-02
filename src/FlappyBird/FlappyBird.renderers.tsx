@@ -12,35 +12,10 @@ export const BirdRenderer = (props: { body: Matter.Body, color: string, size: { 
             borderColor: props.color,
             borderStyle: 'solid',
             position: 'absolute',
-            left: xBody, // how far from left
-            top: yBody, // how far from top
+            left: xBody,
+            top: yBody,
             width: widthBody,
             height: heightBody,
         }}
     />
 }
-
-// export default function Bird(world: Engine["world"], color: string, pos: { x: number, y: number }, size: {
-//     width: number,
-//     height: number,
-// }) {
-//     const initialBird = Matter.Bodies.rectangle(
-//         pos.x,
-//         pos.y,
-//         size.width,
-//         size.height,
-//         {
-//             label: 'Bird',
-//         },
-//     );
-
-//     Matter.World.add(world, initialBird);
-
-//     return {
-//         body: initialBird,
-//         color,
-//         pos,
-//         size,
-//         renderer: <BirdRenderer body={initialBird} color={color} size={size} />,
-//     }
-// }

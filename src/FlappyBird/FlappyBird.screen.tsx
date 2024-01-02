@@ -5,10 +5,9 @@ import initialEntities from './FlappyBird.entities';
 import Physics from './FlappyBird.systems';
 import { GameProps, PhysicsEntities } from '../types';
 
-const entities = initialEntities();
-
 export interface FlappyBirdProps extends GameProps {
     entities?: PhysicsEntities;
+    running?: boolean;
 }
 
 export default function FlappyBird(props: FlappyBirdProps) {
@@ -16,9 +15,11 @@ export default function FlappyBird(props: FlappyBirdProps) {
         <GameEngine
             style={styles.container}
             systems={[Physics]}
-            entities={entities}
+            entities={initialEntities()}
             running={props.running}
-            {...props}
+            onEvent={(e: any) => {
+                console.log({e});
+            }}
         />
     </View>
 }

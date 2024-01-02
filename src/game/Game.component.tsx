@@ -7,18 +7,18 @@ import { MoveFinger } from "./Game.systems";
 
 function Game(props: GameProps, state: GameState) {
   const entities: { [key: number]: Entity } = {
-    1: { position: [40, 200], renderer: <Finger position={[40, 200]} /> },
-    2: {
-      position: [100, 200],
-      renderer: <View
-        style={{
-          width: 100,
-          height: 100,
-          backgroundColor: 'blue',
-          borderRadius: 50,
-        }}
-      />
-    },
+    // 1: { position: [40, 200], renderer: <Finger position={[40, 200]} /> },
+    // 2: {
+    //   position: [100, 200],
+    //   renderer: <View
+    //     style={{
+    //       width: 100,
+    //       height: 100,
+    //       backgroundColor: 'blue',
+    //       borderRadius: 50,
+    //     }}
+    //   />
+    // },
   };
 
   return (
@@ -28,7 +28,6 @@ function Game(props: GameProps, state: GameState) {
       entities={entities}
       onEvent={props.onEvent}
     >
-      <Text>Hello</Text>
       <StatusBar hidden={true} />
     </GameEngine>
   );
