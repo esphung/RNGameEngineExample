@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export const BirdRenderer = (props: { body: Matter.Body, color: string, size: { width: number, height: number } }) => {
     const widthBody = props.body.bounds.max.x - props.body.bounds.min.x;
@@ -16,6 +16,15 @@ export const BirdRenderer = (props: { body: Matter.Body, color: string, size: { 
             top: yBody,
             width: widthBody,
             height: heightBody,
+
+
+            justifyContent: 'center',
+            alignItems: 'center',
         }}
-    />
+    >
+        <Text style={{
+            fontSize: 30,
+            textAlign: 'center',
+        }}>👦🏻</Text>
+    </View>
 }
